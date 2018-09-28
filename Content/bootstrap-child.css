@@ -1,0 +1,48 @@
+﻿body{
+    font-family: 'Roboto', sans-serif;
+    font-weight:300;
+    line-height: 24px;
+    font-size: 17px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+.btn {
+    font-size:17px;
+    border-radius: 0;
+}
+
+.btn-primary {
+    background-color:#e4644a;
+    background-repeat: repeat-x;
+    border: 0;
+    box-shadow: none;
+}
+.btn-primary:hover {
+    background-color:#65c6d2;
+}
+
+.container-fluid  {
+    border-radius:0px;
+}
+
+.icon-service hr {
+
+}
+

@@ -1,0 +1,235 @@
+﻿
+
+
+/* Bouton DÉBUTER */
+.myCaseNav .btn {
+    background-color: #e4644a;
+    color: white;
+    border: none;
+    padding: 15px 40px 15px 30px;
+    border-radius: 0;
+    outline: none;
+    line-height: 45px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.myCaseNav .btn:hover {
+}
+.myCaseNav .btn:active {
+    outline: none;
+    box-shadow: none;
+}
+.shapetriangle {
+    border-right: 25px solid #e4644a;
+    border-top: 75px solid transparent;
+    display: inline-block;
+    float: right;
+    margin-left: 15px;
+}
+
+/* Wrapper & layout */
+.myCaseModal .fsWrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+}
+.myCaseModal .modalWrapper {
+    position: absolute;
+    top: 75px;
+    bottom: 0;
+    right: 0;
+    width: 600px;
+    background-color: white;
+    box-shadow: 0 50px 50px black;
+    pointer-events: all;
+    /*transition: right 500ms ease-in-out;*/
+    transition: right 500ms cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.myCaseModal .modalTitle {
+    background-color: #e4644a;
+    color: white;
+    padding: 11px 35px;
+    position: absolute;
+    width: 100%;
+    height: 40px;
+}
+.myCaseModal .modalTitle h2{
+    margin: 0;
+    font-size: 17px;
+}
+.myCaseModal .modalContent {
+    padding: 30px 40px 30px 35px;
+    overflow: auto;
+    position: absolute;
+    top: 40px;
+    bottom: 0px;
+}
+.myCaseModal.closed .modalWrapper {
+    right: -650px;
+}
+
+/* Notification */
+.notifModal{
+    top: 55px;
+    right: 10px;
+    bottom: auto;
+    left: auto;
+}
+.notifModal p{
+    font-size: 13px;
+    margin: 0 0 0 30px;
+    line-height: 18px;
+}
+.notifModal .glyphicon{
+    position: absolute;
+    top: 16px;
+
+}
+@media (min-width: 768px) {
+    .notifModal .modal-dialog {
+        width: 300px;
+        margin: 30px auto;
+    }
+}
+
+/* Modal FONT */
+.myCaseModal .modalContent h3{
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    line-height: 22px
+}
+.myCaseModal .modalContent{
+    font-size: 13px;
+    line-height: 16px
+}
+.myCaseModal .modalContent p:last-child{
+    margin: 0;
+}
+.myCaseModal a{
+    font-size: 13px;
+    line-height: 16px
+}
+
+
+
+.superStepWrapper{
+    margin-left: 36px;
+    position: relative;
+    border-left: solid 3px #313131;
+}
+
+.userProfileDiv{
+    padding-left: 50px;
+    margin-bottom: 25px;
+    padding-top: 5px;
+}
+.userProfileDiv img{
+    position: absolute;
+    top: 0;
+    left: -15px;
+}
+.userProfileDiv ul{
+    position: absolute;
+    top: 0px;
+    right: 0;
+    text-align: right;
+}
+
+.superStep{
+    padding: 10px 10px 10px 50px;
+    position: relative;
+    background-color: #eee;
+    margin-top: 3px;
+}
+
+.superStep:hover{
+    background-color:#e1e1e1;
+}
+
+.iconWrapper{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -39px;
+}
+.iconBg{
+    position: relative;
+    display: inline-block;
+    width: 72px;
+    height: 72px;
+    background-image: url("../Images/MyCase/rond_gris.png");
+}
+.iconBg img{
+    position: absolute;
+    top:6px;
+    left: 7px;
+}
+.bgGris{
+    background-image: url("../Images/MyCase/rond_gris.png");
+}
+.bgVert{
+    background-image: url("../Images/MyCase/rond_vert.png");
+}
+.bgOrange{
+    background-image: url("../Images/MyCase/rond_orange.png");
+}
+
+.bigCheckImg{
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    opacity: 0.15;
+    display: none;
+}
+
+.checkbox input{
+    height: 16px;
+    width: 16px;
+    margin-top: -1px;
+}
+
+/* SELECTED SuperStep */
+.superStep.selected{
+    border-right: 15px solid #e4644a;
+}
+.superStep.selected .iconBg{
+    background-image: url("../Images/MyCase/rond_orange.png");
+}
+
+/* DISABLED SuperStep */
+.superStep.disabled{
+    color: gray;
+}
+.superStep.disabled h3{
+    margin: 12px 0px;
+}
+.superStep.disabled .desc{
+    display: none;
+}
+
+/* COMPLETED SuperStep */
+.superStep.completed{
+    border-right: 15px solid #65c6d2;
+}
+.superStep.completed h3{
+    margin: 12px 0px;
+}
+.superStep.completed .desc{
+    display: none;
+}
+.superStep.completed .iconBg{
+    background-image: url("../Images/MyCase/rond_vert.png");
+}
+/*.superStep.completed .bigCheckImg{
+    display: block;
+}*/

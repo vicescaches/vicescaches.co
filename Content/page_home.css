@@ -1,0 +1,267 @@
+﻿
+/* GENERAL */
+
+.fullHeight{
+    height: 100%;
+}
+
+
+/* JUMBOTRON */
+
+.container .jumbotron, .container-fluid .jumbotron{
+    border-radius: 0;
+    margin: 0 -15px;
+    overflow: hidden;
+}
+
+.home-jumbotron {
+    height: 800px; /* Set by javascript */
+    padding: 0px;   
+    background-color: #65c6d2;
+    background: url("../Images/bgtile01.jpg") repeat;
+}
+
+
+/* JUMBOTRON - Welcome Logo */
+
+.welcomeLogo {
+    position: absolute;
+    height: 314px;
+    width: 500px;
+    left: 50%;
+    margin-left: -250px;
+    top: 50%;
+    margin-top: -190px;
+}
+.welcomeLogo h1{
+    position: absolute;
+    z-index: 1;
+    top: 28px;
+    right: 0px;
+
+    width: 300px;
+    text-align:right;
+    
+    text-transform: uppercase;
+    font-family: Calibri;
+    font-weight: 700;
+	font-size: 92px;
+    line-height: 74px;
+	color:white;
+    letter-spacing: 2px;
+}
+.welcomeLogo h1 span{
+	font-size: 130px;
+}
+.welcomeLogo h1 small{
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 30px;
+    color: white;
+}
+.welcomeLogo img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 260px;
+}
+
+.welcomeRightPanel{
+    position: absolute;
+    height: 497px;
+    top: 50%;
+    margin-top: -248.5px;
+
+    width: 406px;
+    left: 50%;
+    margin-left: -203px;
+}
+
+.home-jumbotron .arrowDiv{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -30px;
+}
+.home-jumbotron .arrowDiv button{
+    background: none;
+    border: 0;
+}
+
+
+/* JUMBOTRON - Welcome Steps */
+
+.welcomeSteps{
+    padding: 0 0 0 12%;
+    position: relative;
+    top: 50%;
+    margin-top: -260px;
+    height: 440px;
+}
+.welcomeSteps .superStep {
+    padding: 0 0 0 75px;
+    position: relative;
+    margin-top: 40px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    box-shadow: 3px 3px 10px #313131;
+    
+    background-color: white;
+    color: #313131;
+
+    transition: all 200ms;
+}
+.welcomeSteps .superStep:hover {
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    background-color: #e4644a;
+    color: white;
+}
+
+.welcomeSteps .iconWrapper {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -58px;
+}
+.welcomeSteps .iconBg img {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    width: 100px;
+}
+.welcomeSteps .iconBg {
+    position: relative;
+    display: inline-block;
+    height: 114px;
+    background-image: none;
+}
+.welcomeSteps .stepContent{
+    height: 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-size: 24px;
+    line-height: 30px;
+    font-family: calibri;
+    font-weight: 400;
+}
+
+
+/* SUB JUMBOTRON BANNER */
+.sub-jumbotron-banner {
+    height:100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color:#313131;
+    margin: 0px -15px;
+    padding: 0 55px;
+}
+.sub-jumbotron-banner h2{
+    color: white;
+    margin: 0;
+}
+
+.infoSection{
+    padding: 40px;
+}
+
+.specialWell{
+    background-color: #eee;
+    padding: 15px;
+    margin: 20px 0 10px 0;
+    text-align: center;
+}
+
+.infoStep{
+    clear: both;
+    border-right: solid 20px #313131;
+    border-left: solid 20px #313131;
+    padding: 0 20px;
+}
+
+
+/* Lower than 1200 */
+@media (max-width: 1200px) {
+
+.welcomeLogo {
+    height: 288px;
+    margin-top: -165px;
+
+    width: 400px;
+    margin-left: -200px;
+}
+.welcomeLogo img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 213px;
+}
+.welcomeLogo h1{
+
+    top: 28px;
+
+    width: 300px;
+
+	font-size: 76px;
+    line-height: 68px;
+}
+.welcomeLogo h1 span{
+	font-size: 120px;
+}
+
+.welcomeRightPanel{
+    height: 426px;
+    margin-top: -213px;
+
+    width: 348px;
+    margin-left: -174px;
+}
+.welcomeRightPanel img{
+    height: 426px;
+    width: 348px;
+}
+
+}
+
+
+/* Higher than 1600 */
+@media (min-width: 1600px) {
+
+.welcomeLogo {
+    height: 470px;
+    margin-top: -271px;
+    width: 620px;
+    margin-left: -310px;
+}
+.welcomeLogo img{
+    width: 340px;
+}
+.welcomeLogo h1{
+    top: 120px;
+    width: 420px;
+    font-size: 120px;
+    line-height: 90px;
+}
+.welcomeLogo h1 span{
+	font-size: 200px;
+}
+
+.welcomeRightPanel{
+    height: 598px;
+    margin-top: -299px;
+
+    width: 488.5px;
+    margin-left: -244px;
+}
+.welcomeRightPanel img{
+    height: 598px;
+    width: 488.5px;
+}
+
+}

@@ -1,0 +1,161 @@
+﻿
+
+/*** BASE ELEMENTS CSS ***/
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child {
+    margin-top: 0;
+}
+
+input::-webkit-input-placeholder {
+    color: #c6c6c6 !important;
+}
+ 
+input:-moz-placeholder { /* Firefox 18- */
+    color: #c6c6c6 !important;
+}
+ 
+input::-moz-placeholder {  /* Firefox 19+ */
+    color: #c6c6c6 !important;
+}
+ 
+input:-ms-input-placeholder {  
+    color: #c6c6c6 !important;
+}
+
+b, strong{
+    font-weight: 700;
+}
+
+
+/*** NAVBAR (Remove if using AmsgNavBar01) ***/
+
+#mainNav{
+    border: none;
+    background-color: #313131;
+}
+
+.navbar-brand {
+  float: left;
+  height: 75px;
+  padding: 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+}
+.navbar-brand h1{
+    position: absolute;
+    left: -9999px;
+}
+.navbar-nav > li > a {
+    line-height: 45px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+	text-transform: uppercase;
+    font-size:14px;
+}
+
+.nav>li>a>img {
+    width: 43px;
+
+    /*-webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+
+    opacity: 0.66;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    -moz-transition: opacity 0.2s ease-in-out;
+    -ms-transition: opacity 0.2s ease-in-out;
+    -o-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;*/
+}
+
+.nav>li>a:hover img, .nav>li.active>a img {
+    
+    /*-webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+
+    opacity: 1;*/
+}
+
+.nav>li>a {
+    border-left: 1px solid #424242;
+}
+
+
+/*** ROLL DOWN ***/
+.vcMenu li{
+    position: relative;
+}
+.roll-down-header{
+    position: absolute;
+    top: 75px;
+    right: 0px;
+
+    width:500px;
+    background-color:#313131;
+    border-top:1px solid #424242;
+    /*border:1px solid #b3b3b3;*/
+    padding:25px;
+    padding-bottom: 15px;
+    margin-top:0px;
+
+    opacity:0;
+    transition: all 200ms;
+    pointer-events:none;
+    z-index:10;
+    
+}
+
+.vcMenu li:hover .roll-down-header{
+    opacity:1;
+    pointer-events: auto;
+}
+
+.roll-down-header p, .roll-down-header h2{
+    color:white;
+}
+
+
+
+/*** LAYOUT CSS ***/
+
+.page-wrapper{
+    padding-top: 75px;
+}
+
+.breadcrumb{
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    background-color: #080808;
+    border-radius: 0;
+    color: white;
+}
+.breadcrumb>.active {
+    color: #ddd;
+}
+.breadcrumb a {
+    color: #65c6d2;
+}
+
+.container.admin{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.navbar-brand img{
+    padding-left: 40px;
+    width: 86%;
+    padding-top: 10px;
+}   
