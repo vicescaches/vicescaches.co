@@ -1,1 +1,488 @@
-Hello
+
+
+
+<!DOCTYPE html>
+<html lang="fr-ca">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La solution pour vos probl&#232;me de vice cach&#233;" />
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <title>Accueil - Le vice caché</title>
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:100,200,300,400,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,200,300,600" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/bootstrap-child.css?v=0.8" rel="stylesheet" />
+    <link href="/Content/Layout.css?v=0.8" rel="stylesheet" />
+
+    <!-- JS -->
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+    
+    <script src="/Scripts/dossierclient.js?v=0.8"></script>
+
+    <!-- Session timeout fix -->
+    <script type="text/javascript">
+        // If an AJAX request returns the login page (because of a session timeout)
+        // this var will tell the login page to do a page reload.
+        // This prevent the login page to appear as a partial view within any pages.
+
+        // SAUF QUE... Dans CBIntranet c'est pas la même page de layout avec le login
+        //var loginDoReload = true;
+    </script>
+
+
+</head>
+
+
+<body>
+
+    <nav id="mainNav" class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+
+            <!-- Brand logo -->
+            <div class="navbar-header">
+                
+
+                <a class="navbar-brand" href="/">
+                    
+                    <img src="/Images/levicecache_logo_v4.png" />
+                    <h1>Le vice caché</h1>
+                </a>
+            </div>
+
+            <!-- Main menu -->
+            
+
+            <!-- My Case Modal -->
+            
+
+<link href="/Content/modal_mycase.css?v=0.8" rel="stylesheet" />
+
+
+<!-- Main menu -->
+<ul class="nav navbar-nav navbar-right myCaseNav">
+    <li>
+        <button type="button" class="btn" onclick="$('.myCaseModal').toggleClass('closed');">Mon dossier</button>
+    </li>
+</ul>
+<div class="shapetriangle"></div>
+
+<!-- Modal : Mon Dossier -->
+<div class="myCaseModal closed">
+    <div class="fsWrapper">
+        <div class="modalWrapper">
+            <div class="modalTitle">
+                
+                &nbsp;
+            </div>
+            <div class="modalContent">
+
+                <!-- Content -->
+                <div class="superStepWrapper">
+
+                    <!-- Top -->
+                    <div class="userProfileDiv">
+                        <img src="/Images/MyCase/pin.png" />
+                        <h3>Ma liste de tâches</h3>
+                        
+                        <p><a href="/Home#aide">Comment ça fonctionne?</a></p>
+                    </div>
+
+                    <!-- 1 -->
+                    <div class="superStep completed">
+                        <div class="iconWrapper">
+                            <div class="iconBg">
+                                <img src="/Images/MyCase/icon_validation.png" />
+                            </div>
+                        </div>
+                        <img class="bigCheckImg" src="/Images/MyCase/bigcheck.png" />
+                        <h3><strong>1</strong> Validation</h3>
+                        <div class="desc">
+                            <p>Avant tout, vous devez vous assurez de certain détails légales. Lisez les articles de cette section pour valider si vous détenez ou pas un cas de vice caché.</p>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" checked> J'ai lu la section <a href="/Validation#section1">Nécessité de la garantie légale</a>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" checked> J'ai lu la section <a href="/Validation#section2">Les 4 critères généralement reconnus</a>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" checked> J'ai lu la section <a href="/Validation#section3">Les exceptions généralement reconnues</a>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- 2 -->
+                    <div class="superStep selected">
+                        <div class="iconWrapper">
+                            <div class="iconBg">
+                                <img src="/Images/MyCase/icon_vices.png" />
+                            </div>
+                        </div>
+                        <h3><strong>2</strong> Trouver vos vices cachés</h3>
+                        <div class="desc">
+                            <p>Parcourez la liste des vices caché et identifiez celui ou ceux qui font l’objet de votre dossier.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="superStep disabled">
+                        <div class="iconWrapper">
+                            <div class="iconBg">
+                                <img src="/Images/MyCase/icon_specialistes.png" />
+                            </div>
+                        </div>
+                        <h3><strong>3</strong> Faites valider par un spécialiste</h3>
+                        <div class="desc">
+                            <p>Pour qu’un vice caché soit considéré, le probleme doit être constaté par un spécialiste dans un domaine pertinent au problème en question.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4 -->
+                    <div class="superStep disabled">
+                        <div class="iconWrapper">
+                            <div class="iconBg">
+                                <img src="/Images/MyCase/icon_denonciation.png" />
+                            </div>
+                        </div>
+                        <h3><strong>4</strong> Avis de dénonciation</h3>
+                        <div class="desc">
+                            <p>Il est primordiale de communiquer avec le vendeur de la propriété avant d’entamer de couteuses procédures juridique. Utilisez ce générateur d’avis de dénonciation pour signaler vos problème au vendeur.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5 -->
+                    <div class="superStep disabled">
+                        <div class="iconWrapper">
+                            <div class="iconBg bgGris">
+                                <img src="/Images/MyCase/icon_med.png" />
+                            </div>
+                        </div>
+                        <h3><strong>5</strong> Mise en demeure</h3>
+                        <div class="desc">
+                            <p>Si le tout ne s’est pas réglé rendu ici, c’est le temps d’envoyer une mise en demeure. Utilisez ce générateur pour vous aider à rédiger votre mise en demeure.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal : Notification -->
+<div class="modal notifModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                <span class="glyphicon glyphicon-info-sign"></span>
+                <p id="notifMsg">L'élément <a href="/Vices">Manganèse dans l'eau d'un puit</a> à été ajouter à votre dossier</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    var fadeOutTimer;
+
+    //PAGELOAD
+    $(function () {
+
+        //Open modal (for test)
+        //$('.myCaseModal').toggleClass('closed');
+
+    })
+
+    function openNotifModal(message) {
+
+        //Prevent closing if already triggered triggered
+        clearTimeout(fadeOutTimer);
+
+        //Set message
+        $("#notifMsg").html(message);
+
+        //Fade in and out notif modal
+        $(".notifModal").fadeIn();
+        fadeOutTimer = setTimeout(function () { $(".notifModal").fadeOut(); }, 6000);
+    }
+
+</script>
+
+            <!-- Menu -->
+            <ul class="nav navbar-nav navbar-right vcMenu">
+                <li class="validation">
+                    <a href="/Validation">
+                        <img src="/Images/MenuIcons/validation.png" />
+                    </a>
+                    <div class="roll-down-header">
+                        <h2>Validation</h2>
+                        <p>Lorem ipsum dolor sit amet, vidit mundi verear ne mea, ea prima solet eam.</p>
+                    </div>
+                </li>
+                <li class="lesvices">
+                    <a href="/Vices">
+                        <img src="/Images/MenuIcons/vices.png" />
+                    </a>
+                    <div class="roll-down-header">
+                        <h2>Les vices</h2>
+                        <p>Lorem ipsum dolor sit amet, vidit mundi verear ne mea, ea prima solet eam.</p>
+                    </div>
+                </li>
+                <li class="specialistes">
+                    <a href="/Specialistes">
+                        <img src="/Images/MenuIcons/specialistes.png" />
+                    </a>
+                    <div class="roll-down-header">
+                        <h2>Spécialistes</h2>
+                        <p>Lorem ipsum dolor sit amet, vidit mundi verear ne mea, ea prima solet eam.</p>
+                    </div>
+                </li>
+                <li class="generateur">
+                    <a href="/Generateur">
+                        <img src="/Images/MenuIcons/misedemeure.png" />
+                    </a>
+                    <div class="roll-down-header">
+                        <h2>Générateur de document</h2>
+                        <p>Lorem ipsum dolor sit amet, vidit mundi verear ne mea, ea prima solet eam.</p>
+                    </div>
+                </li>
+            </ul>
+
+            
+
+        </div>
+    </nav>
+
+    <div class="container-fluid page-wrapper">
+        
+
+<link href="/Content/page_home.css?v=0.8" rel="stylesheet" />
+
+<!-- Jumbotron FullScreen -->
+<div class="jumbotron home-jumbotron">
+
+    <div class="row fullHeight">
+        <div class="col-md-6 fullHeight">
+            <div class="welcomeLogo">
+                <img src="/Images/loupe_v2.png" />
+                <h1><small>Le</small><br /> <span>V</span>ice <span>C</span>aché</h1>
+            </div>
+        </div>
+        <div class="col-md-6 fullHeight">
+
+            <div class="welcomeRightPanel">
+                <img src="/Images/WelcomeIcons/vicecache.png" />
+            </div>
+
+            <div class="welcomeSteps" style="display: none;">
+                <!-- 1 -->
+                <div class="superStep">
+                    <div class="iconWrapper">
+                        <div class="iconBg">
+                            <img src="/Images/MenuIcons/validation.png" />
+                        </div>
+                    </div>
+                    <div class="stepContent">
+                        Suis-je admissible?
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="superStep">
+                    <div class="iconWrapper">
+                        <div class="iconBg">
+                            <img src="/Images/MenuIcons/vices.png" />
+                        </div>
+                    </div>
+                    <div class="stepContent">
+                        Quel est mon vice caché?
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="superStep">
+                    <div class="iconWrapper">
+                        <div class="iconBg">
+                            <img src="/Images/MenuIcons/specialistes.png" />
+                        </div>
+                    </div>
+                    <div class="stepContent">
+                        Qu'en pense le spécialiste?
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="superStep">
+                    <div class="iconWrapper">
+                        <div class="iconBg">
+                            <img src="/Images/MenuIcons/avisdenonciation.png" />
+                        </div>
+                    </div>
+                    <div class="stepContent">
+                        J'avertis l'ancien propriétaire!
+                    </div>
+                </div>
+
+                <!-- 5 -->
+                <div class="superStep">
+                    <div class="iconWrapper">
+                        <div class="iconBg bgGris">
+                            <img src="/Images/MenuIcons/misedemeure.png" />
+                        </div>
+                    </div>
+                    <div class="stepContent">
+                        Mise en demeure
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="arrowDiv">
+        <button onclick="scrollDown();">
+            <img src="/Images/WelcomeIcons/home-arrow.png" />
+        </button>
+    </div>
+
+</div>
+
+<!-- Sub banner -->
+<div class="sub-jumbotron-banner">
+    <h2>Qui sommes nous et comment ça fonctionne?</h2>
+</div>
+
+<!-- Info section -->
+<div class="infoSection">
+
+    <div class="row" style="margin: 20px -15px 10px -15px;">
+        <div class="col-md-8">
+
+            <h3>Le mot de Bienvenue des fondateurs!</h3>
+            <p>Nous sommes un jeune cabinet d’avocats et nous croyons à « l’empowerment » juridique et à l’accessibilité de la justice. Nous vous offrons gratuitement les outils de ce site afin de favoriser un règlement facile et abordable de vos problèmes. Néanmoins, si vos problèmes s’avéraient être très sérieux ou très complexes, nous vous suggérons de <a href="#">nous contacter</a> afin d’obtenir l’aide de professionnels.</p>
+
+            <h3>Comment ça fonctionne?</h3>
+            <p>
+                Le site est divisé en plusieurs sections qui ont pour but de vous informer et vous aider à :
+                <ul>
+                    <li>connaître les démarches d'une résolution d'un vice caché</li>
+                    <li>identifier et connaître les spécificités de votre vice caché</li>
+                    <li>connaître les coordonnées d’experts compétents pour vous aider</li>
+                    <li>générer un avis de dénonciation et une mise en demeure.</li>
+                </ul>
+            </p>
+            <p>Chaque section est accessible en tout temps en utilisant la barre de navigation en haut de la page. Nous vous invitons néamoins à suivre les étapes à l'aide de la section <strong>mon dossier</strong> pour vous assurez de ne rien manquer.</p>
+            <p>Chaque section du site explore en profondeur les éléments suivants:</p>
+
+        </div>
+        <div class="col-md-4">
+            <div style="background-color: #eee; padding: 15px;">
+                <img src="/Images/WelcomeIcons/tutArrow.png" style="float:right; margin: 0 0 0 15px;" />
+                <p><strong>Ma liste de tâches</strong></p>
+                <p>Il y a beaucoup de notions à prendre en compte lorsqu'on veut régler un problème de vice caché. Pour vous assurer de ne rien manquer, nous vous invitons à suivre les étapes suggéré dans la section <strong>mon dossier</strong>.</p>
+                <p>Gardez trace de votre progrès en cochant les cases prévues à cet effet. En échange, la section <strong>mon dossier</strong> vous indiquera toujours la prochaine étape à suivre. Suivez les hyperliens et les indications spécifiques à votre cas pour régler efficacement votre problème de vice caché!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="infoStep">
+        <img src="/Images/WelcomeIcons/1.png" style="float: left; margin: 10px 15px 0 0;" />
+        <h3>Validation et marche à suivre</h3>
+        <p>Qu’est-ce qui constitue une vice cache? Que dois-je faire comme démarche lorsque je découvre un problème que je crois être un vice caché? Cette étape vous permettra de connaitre les éléments juridiques essentiels qui font qu’un problème se qualifie comme un vice caché. Aussi, on vous indiquera quelles sont les étapes concrètes à entreprendre pour faire valoir vos droits et pour gérer la situation lorsque vous croyez être en présence d’un vice caché.</p>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="infoStep">
+        <img src="/Images/WelcomeIcons/2.png" style="float: left; margin: 10px 15px 0 0;" />
+        <h3>Identifier vos vices cachés</h3>
+        <p>Une fois la validation des critères effectuée, vous pouvez vérifier les particularités de votre vice caché dans notre répertoire qui vous indique si certains jugements favorables et défavorables ont déjà été rendus pour des situations semblables. Vous pourrez aussi savoir quel type d’expert est généralement nécessaire et, par la suite, ajouter les vices qui s’appliquent à vous dans MON DOSSIER.</p>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="infoStep">
+        <img src="/Images/WelcomeIcons/3.png" style="float: left; margin: 10px 15px 0 0;" />
+        <h3>Les spécialistes</h3>
+        <p>Bien souvent, les gens qui se trouvent aux prises avec un vice caché ont bien peu d’idée des experts qui doivent être contactés afin de valider la nature et l’étendue du problème. Ici, en plus de vous avoir indiqué quel type de spécialiste est généralement approprié dans la section IDENTIFIER VOS VICES CACHÉS, cette section vous offre un bottin des spécialistes au Québec selon votre région administrative.</p>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="infoStep">
+        <img src="/Images/WelcomeIcons/4.png" style="float: left; margin: 10px 15px 0 0;" />
+        <h3>L'avis de dénonciation</h3>
+        <p>La dénonciation au vendeur du vice caché découvert étant une étape juridique ESSENTIELLE afin de faire valoir les droits d’un acheteur, nous vous proposons un générateur d’avis de dénonciation sur mesure. Cet outil gratuit vous permettra d’avoir un document aux allures professionnel tout en vous évitant de payer plusieurs centaines de dollars.</p>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="infoStep">
+        <img src="/Images/WelcomeIcons/5.png" style="float: left; margin: 10px 15px 0 0;" />
+        <h3>La mise en demeure</h3>
+        <p>Une fois la dénonciation envoyée le cas échéant et si les problèmes persistent, nous vous offrons un générateur de mises en demeure. Cet outil, comme pour le générateur d’avis de dénonciation, vous permettra de produire gratuitement un document aux allures professionnels.</p>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="specialWell">
+        Si en tout temps votre dossier prend une tournure inattendue ou devient trop complexe, n'hésitez pas à <a href="#">nous contacter</a>.
+    </div>
+
+</div>
+
+<script>
+
+    $(function () {
+
+        //Resize jumbotron to be full height
+        $(window).resize(resizeJumbotron);
+        resizeJumbotron();
+
+        selectSectionWithHash();
+        $(window).on('hashchange', selectSectionWithHash);
+
+    })
+
+    function selectSectionWithHash() {
+
+        var hash = window.location.hash
+
+        if (hash) {
+            $('.myCaseModal').addClass('closed');
+        }
+
+        if (hash == "#aide") {
+            scrollDown();
+        }
+    }
+
+    function resizeJumbotron() {
+        //Resize jumbotron to be full height
+        var nbpx = $(window).height() - 75;
+        $(".home-jumbotron").css("height", nbpx + "px");
+    }
+
+    function scrollDown() {
+        var nbpx = $(window).height() - 75;
+        $("html, body").animate({ scrollTop: nbpx + "px" });
+    }
+
+</script>
+    </div>
+
+</body>
+
+</html>
