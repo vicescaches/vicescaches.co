@@ -1,0 +1,203 @@
+ <nav id="mainNav" class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+
+
+
+            <!-- Main menu -->
+            
+
+            <!-- My Case Modal -->
+            
+
+
+
+<!-- Main menu -->
+<ul class="nav navbar-nav navbar-right myCaseNav">
+    <li>
+        <button type="button" class="btn" onclick="$('.myCaseModal').toggleClass('closed');">Mon dossier</button>
+    </li>
+</ul>
+<div class="shapetriangle"></div>
+
+<!-- Modal : Mon Dossier -->
+<div class="myCaseModal closed">
+    <div class="fsWrapper">
+        <div class="modalWrapper">
+            <div class="modalTitle">
+                
+                &nbsp;
+            </div>
+            <div class="modalContent">
+
+                <!-- Content -->
+                <div class="superStepWrapper">
+
+                    <!-- Top -->
+                    <div class="userProfileDiv">
+                        <img src="/Images/MyCase/pin.png" />
+                        <h3>Ma liste de tâches</h3>
+                        
+                        <p><a href="/Home#aide">Comment ça fonctionne?</a></p>
+                    </div>
+
+                    <!-- 1 -->
+                    <div class="superStep completed">
+                        <div class="iconWrapper">
+                            <div class="iconBg">
+                                <img src="/Images/MyCase/icon_validation.png" />
+                            </div>
+                        </div>
+                        <img class="bigCheckImg" src="/Images/MyCase/bigcheck.png" />
+                        <h3><strong>1</strong> Validation</h3>
+                        <div class="desc">
+                            <p>Avant tout, vous devez vous assurez de certain détails légales. Lisez les articles de cette section pour valider si vous détenez ou pas un cas de vice caché.</p>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" checked> J'ai lu la section <a href="/Validation#section1">Nécessité de la garantie légale</a>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" checked> J'ai lu la section <a href="/Validation#section2">Les 4 critères généralement reconnus</a>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" checked> J'ai lu la section <a href="/Validation#section3">Les exceptions généralement reconnues</a>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- 2 -->
+                    <div class="superStep selected">
+                        <div class="iconWrapper">
+                            <div class="iconBg">
+                                <img src="/Images/MyCase/icon_vices.png" />
+                            </div>
+                        </div>
+                        <h3><strong>2</strong> Trouver vos vices cachés</h3>
+                        <div class="desc">
+                            <p>Parcourez la liste des vices caché et identifiez celui ou ceux qui font l’objet de votre dossier.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="superStep disabled">
+                        <div class="iconWrapper">
+                            <div class="iconBg">
+                                <img src="/Images/MyCase/icon_specialistes.png" />
+                            </div>
+                        </div>
+                        <h3><strong>3</strong> Faites valider par un spécialiste</h3>
+                        <div class="desc">
+                            <p>Pour qu’un vice caché soit considéré, le probleme doit être constaté par un spécialiste dans un domaine pertinent au problème en question.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4 -->
+                    <div class="superStep disabled">
+                        <div class="iconWrapper">
+                            <div class="iconBg">
+                                <img src="/Images/MyCase/icon_denonciation.png" />
+                            </div>
+                        </div>
+                        <h3><strong>4</strong> Avis de dénonciation</h3>
+                        <div class="desc">
+                            <p>Il est primordiale de communiquer avec le vendeur de la propriété avant d’entamer de couteuses procédures juridique. Utilisez ce générateur d’avis de dénonciation pour signaler vos problème au vendeur.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5 -->
+                    <div class="superStep disabled">
+                        <div class="iconWrapper">
+                            <div class="iconBg bgGris">
+                                <img src="/Images/MyCase/icon_med.png" />
+                            </div>
+                        </div>
+                        <h3><strong>5</strong> Mise en demeure</h3>
+                        <div class="desc">
+                            <p>Si le tout ne s’est pas réglé rendu ici, c’est le temps d’envoyer une mise en demeure. Utilisez ce générateur pour vous aider à rédiger votre mise en demeure.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal : Notification -->
+<div class="modal notifModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                <span class="glyphicon glyphicon-info-sign"></span>
+                <p id="notifMsg">L'élément <a href="/Vices">Manganèse dans l'eau d'un puit</a> à été ajouter à votre dossier</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var fadeOutTimer;
+    //PAGELOAD
+    $(function () {
+        //Open modal (for test)
+        //$('.myCaseModal').toggleClass('closed');
+    })
+    function openNotifModal(message) {
+        //Prevent closing if already triggered triggered
+        clearTimeout(fadeOutTimer);
+        //Set message
+        $("#notifMsg").html(message);
+        //Fade in and out notif modal
+        $(".notifModal").fadeIn();
+        fadeOutTimer = setTimeout(function () { $(".notifModal").fadeOut(); }, 6000);
+    }
+</script>
+
+            <!-- Menu -->
+            <ul class="nav navbar-nav navbar-right vcMenu">
+                <li class="validation">
+                    <a href="/Validation">
+                        <img src="/Images/MenuIcons/validation.png" />
+                    </a>
+                    <div class="roll-down-header">
+                        <h2>Validation</h2>
+                    </div>
+                </li>
+                <li class="lesvices">
+                    <a href="/Vices">
+                        <img src="/Images/MenuIcons/vices.png" />
+                    </a>
+                    <div class="roll-down-header">
+                        <h2>Les vices</h2>
+                    </div>
+                </li>
+                <li class="specialistes">
+                    <a href="/Specialistes">
+                        <img src="/Images/MenuIcons/specialistes.png" />
+                    </a>
+                    <div class="roll-down-header">
+                        <h2>Spécialistes</h2>
+                    </div>
+                </li>
+                <li class="generateur">
+                    <a href="/Generateur">
+                        <img src="/Images/MenuIcons/misedemeure.png" />
+                    </a>
+                    <div class="roll-down-header">
+                        <h2>Générateur de document</h2>
+                    </div>
+                </li>
+            </ul>
+
+            
+
+        </div>
+    </nav>
