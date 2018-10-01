@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr-ca">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La solution pour vos probl&#232;me de vice cach&#233;" />
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <title>Accueil - Le vice caché</title>
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:100,200,300,400,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,200,300,600" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/bootstrap-child.css?v=0.8" rel="stylesheet" />
+    <link href="/Content/Layout.css?v=0.8" rel="stylesheet" />
+
+    <!-- JS -->
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+    
+    <script src="/Scripts/dossierclient.js?v=0.8"></script>
+
+    <!-- Session timeout fix -->
+    <script type="text/javascript">
+        // If an AJAX request returns the login page (because of a session timeout)
+        // this var will tell the login page to do a page reload.
+        // This prevent the login page to appear as a partial view within any pages.
+
+        // SAUF QUE... Dans CBIntranet c'est pas la même page de layout avec le login
+        //var loginDoReload = true;
+    </script>
+    <link href="/Content/modal_mycase.css?v=0.8" rel="stylesheet" />
+    <link href="/Content/page_home.css?v=0.8" rel="stylesheet" />
+    <script> 
+    $(function(){
+      $("#navigation").load("nav.html"); 
+    });
+    </script> 
+</head>
+
+
+<body>
+  <div id="navigation"></div>
+
+    <div class="container-fluid page-wrapper">
+
+<link href="/Content/page_documentation.css?v=0.8" rel="stylesheet" />
+
+
+<ul class="breadcrumb">
+    <li><a href="/">Accueil</a></li>
+    <li class="active">Validation</li>
+</ul>
+
+<div class="documentationWrapper">
+    <section class="menuSection">
+
+        <h1>Les vices</h1>
+
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active" id="valBtn_1" onclick="click_menuitem(this, 'page1');"><a href="#">Puits - Sédiments (magnanèse)</a></li>
+  <li role="presentation" id="valBtn_2" onclick="click_menuitem(this, 'page2');"><a href="#">Fondations - Infiltration d'eau</a></li>
+</ul>
+
+
+    </section>
+    <hr>
+    <section class="contentSection">
+      <div class="partialPage" id="page1">
+
+        <h2 class="page-header">Manganèse dans l’eau d’un puits</h2>
+
+        <p>Une concentration de manganèse trop élevée dans l’eau d’un puits peut avoir des répercussions sérieuses sur la vie quotidienne des acheteurs d’une maison, leur santé et sur la maison elle-même.</p>
+        <p>
+            Une concentration supérieure à 50 µg/l (0.05) est considérée néfaste.
+            À plusieurs reprises la présence de manganèse dans l’eau d’un puits a été considérée comme un vice caché par les tribunaux :
+        </p>
+        <ul>
+            <li>Lambert c. Bazin, 2005 CanLII 6955 (QC CQ), <a href="http://canlii.ca/t/1jznp" target="_BLANK">http://canlii.ca/t/1jznp</a></li>
+            <li>Mercier c. Blouin, 2010 QCCQ 11278 (CanLII),  <a href="http://canlii.ca/t/2dwlq" target="_BLANK">http://canlii.ca/t/2dwlq</a></li>
+            <li>Poilpray c. Béliveau, 2014 QCCQ 724 (CanLII), <a href="http://canlii.ca/t/g33sk" target="_BLANK">http://canlii.ca/t/g33sk</a></li>
+        </ul>
+        <p>
+            Néanmoins, pour que le manganèse soit considéré comme un vice caché, les vendeurs devront idéalement avoir effectué des vérifications quant à la qualité de l’eau avant l’achat de la propriété ou bien s’être fait assurer que l’eau était limpide et potable par les vendeurs.
+            De plus, l’existence de problème récurrent de manganèse dans les puits de la région avoisinante à la propriété peut constituer un obstacle à faire valoir un recours.
+            Aussi, il est à noter les acheteurs devront prouver tous les éléments du vice caché (LIEN ICI), notamment la gravité du vice et le déficit d’usage qu’il engendre (ex : eau impropre à la consommation, vêtement tachés, tuyaux obstrués, etc.)
+            Afin de vérifier la concentration de manganèse dans l’eau, il est recommandé de faire affaires avec une firme spécialisée dans l’analyse d’eau. Par la suite, le recours à des experts en forage de puits ou en installation de filtre peut être requise.
+        </p>
+    </section>
+</div>
+
+<script>
+
+    var lastClicked;
+
+    //PAGELOAD
+    $(function () {
+
+        //Select top menu item
+        $(".lesvices").addClass("active");
+
+        //Set actions
+        $(".collapsibleNav button").click(function () {
+            var viceId = $(this).attr("data-vice-id");
+            select_vice(viceId);
+        });
+
+    })
+
+    //On click - sur un élément du menu de gauche
+    function click_menuitem(ele) {
+
+        //Close all
+        if (lastClicked != ele) {
+            $("li").removeClass("opened");
+            $(".collapsibleNav").slideUp();
+            lastClicked = ele;
+        }
+
+        //Open selected
+        ele = $(ele).closest("li");
+        $(ele).toggleClass("opened");
+        $(ele).find(".collapsibleNav").slideToggle();
+    }
+
+    function select_vice(viceId) {
+        console.log("ViceId: " + viceId);
+
+        $.ajax({
+            url: 'Vices/GetVice',
+            data: { 'viceId' : viceId },
+            success: function (data) {
+                $(".contentSection").html(data);
+            }
+        });
+    }
+
+</script>
+    </div>
+
+</body>
+
+</html>
