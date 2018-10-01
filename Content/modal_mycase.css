@@ -27,6 +27,7 @@
     display: inline-block;
     float: right;
     margin-left: 15px;
+    visibility: hidden;
 }
 
 /* Wrapper & layout */
